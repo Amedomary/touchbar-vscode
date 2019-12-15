@@ -1,43 +1,151 @@
 {
-	"name": "touchbarvscode",
-	"displayName": "Touch Bar Pro",
-	"description": "Support touch bar for macbook",
-	"publisher": "amedomary",
-	"version": "0.0.1",
-	"engines": {
-		"vscode": "^1.41.0"
-	},
-	"categories": [
-		"Other"
-	],
-	"activationEvents": [
-		"onCommand:extension.helloWorld"
-	],
-	"main": "./out/extension.js",
-	"contributes": {
-		"commands": [
-			{
-				"command": "extension.helloWorld",
-				"title": "Hello World"
-			}
-		]
-	},
-	"scripts": {
-		"vscode:prepublish": "npm run compile",
-		"compile": "tsc -p ./",
-		"watch": "tsc -watch -p ./",
-		"pretest": "npm run compile",
-		"test": "node ./out/test/runTest.js"
-	},
-	"devDependencies": {
-		"@types/glob": "^7.1.1",
-		"@types/mocha": "^5.2.7",
-		"@types/node": "^12.11.7",
-		"@types/vscode": "^1.41.0",
-		"glob": "^7.1.5",
-		"mocha": "^6.2.2",
-		"typescript": "^3.6.4",
-		"tslint": "^5.20.0",
-		"vscode-test": "^1.2.2"
-	}
+  "name": "touchbarvscode",
+  "displayName": "TouchBar Pro",
+  "description": "Support touch bar for macbook",
+  "publisher": "amedomary",
+  "repository": "https://github.com/Amedomary/touchbar-vscode",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.41.0"
+  },
+  "categories": [
+    "Keymaps"
+  ],
+  "activationEvents": [
+    "onCommand:extension.touchBar.term",
+    "onCommand:extension.touchBar.comment",
+    "onCommand:extension.touchBar.qopen",
+    "onCommand:extension.touchBar.commands",
+    "onCommand:extension.touchBar.toggleSidebar",
+    "onCommand:extension.touchBar.ftpSync"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.helloWorld",
+        "title": "Hello World"
+      },
+      {
+        "command": "extension.touchBar.term",
+        "group": "touchBar",
+        "title": "Term"
+      },
+      {
+        "command": "extension.touchBar.comment",
+        "group": "touchBar",
+        "title": "//"
+      },
+      {
+        "command": "extension.touchBar.qopen",
+        "group": "touchBar",
+        "title": "Qopen"
+      },
+      {
+        "command": "extension.touchBar.commands",
+        "group": "touchBar",
+        "title": "Amedomary 2"
+      },
+      {
+        "command": "extension.touchBar.toggleSidebar",
+        "group": "touchBar",
+        "title": "Sidebar"
+      },
+      {
+        "command": "extension.touchBar.ftpSync",
+        "group": "touchBar",
+        "title": "FTP→"
+      }
+    ],
+    "menus": {
+      "touchBar": [
+        {
+          "command": "extension.touchBar.term",
+          "group": "touchBar",
+          "when": "config.touchBar.term"
+        },
+        {
+          "command": "extension.touchBar.comment",
+          "group": "touchBar",
+          "when": "config.touchBar.comment"
+        },
+        {
+          "command": "extension.touchBar.qopen",
+          "group": "touchBar",
+          "when": "config.touchBar.qopen"
+        },
+        {
+          "command": "extension.touchBar.commands",
+          "group": "touchBar",
+          "when": "config.touchBar.commands"
+        },
+        {
+          "command": "extension.touchBar.toggleSidebar",
+          "group": "touchBar",
+          "when": "config.touchBar.toggleSidebar"
+        },
+        {
+          "command": "extension.touchBar.ftpSync",
+          "group": "touchBar",
+          "when": "config.touchBar.ftpSync"
+        }
+      ]
+    },
+    "configuration": [
+      {
+        "type": "object",
+        "title": "Touch Bar Commands",
+        "properties": {
+          "touchBar.term": {
+            "type": "boolean",
+            "default": true,
+            "description": "Toggle the built in terminal on/off"
+          },
+          "touchBar.comment": {
+            "type": "boolean",
+            "default": true,
+            "description": "Toggle comments on selected lines on/off"
+          },
+          "touchBar.qopen": {
+            "type": "boolean",
+            "default": true,
+            "description": "Quick Open any file etc."
+          },
+          "touchBar.commands": {
+            "type": "boolean",
+            "default": true,
+            "description": "Open the command pallette"
+          },
+          "touchBar.toggleSidebar": {
+            "type": "boolean",
+            "default": true,
+            "description": "Toggle sidebar on/off"
+          },
+          "touchBar.ftpSync": {
+            "type": "boolean",
+            "default": false,
+            "description": "FTP sync project with ftp-sync"
+          }
+        }
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/glob": "^7.1.1",
+    "@types/mocha": "^5.2.7",
+    "@types/node": "^12.11.7",
+    "@types/vscode": "^1.41.0",
+    "glob": "^7.1.5",
+    "mocha": "^6.2.2",
+    "typescript": "^3.6.4",
+    "tslint": "^5.20.0",
+    "vscode-test": "^1.2.2"
+  }
 }
