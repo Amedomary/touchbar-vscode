@@ -1,7 +1,8 @@
 {
-	"name": "macos",
-	"displayName": "touchbar-3",
-	"description": "support touch",
+	"name": "touchbarvscode",
+	"displayName": "Touch Bar Pro",
+	"description": "Support touch bar for macbook",
+	"publisher": "amedomary",
 	"version": "0.0.1",
 	"engines": {
 		"vscode": "^1.41.0"
