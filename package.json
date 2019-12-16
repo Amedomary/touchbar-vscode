@@ -11,131 +11,101 @@
   "categories": [
     "Keymaps"
   ],
+  "keywords": [
+    "macbook pro",
+    "extra buttons",
+    "vscode",
+    "touch bar",
+    "amedomary"
+  ],
+  "icon": "images/icon.png",
   "activationEvents": [
-    "onCommand:extension.touchBar.term",
-    "onCommand:extension.touchBar.comment",
-    "onCommand:extension.touchBar.qopen",
-    "onCommand:extension.touchBar.commands",
-    "onCommand:extension.touchBar.toggleSidebar",
-    "onCommand:extension.touchBar.ftpSync"
+    "*"
   ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "extension.helloWorld",
-        "title": "Hello World"
-      },
-      {
-        "command": "extension.touchBar.term",
-        "group": "touchBar",
-        "title": "Term"
-      },
-      {
-        "command": "extension.touchBar.comment",
-        "group": "touchBar",
-        "title": "//"
-      },
-      {
-        "command": "extension.touchBar.qopen",
-        "group": "touchBar",
-        "title": "Qopen"
-      },
-      {
-        "command": "extension.touchBar.commands",
-        "group": "touchBar",
-        "title": "Amedomary 2"
-      },
-      {
-        "command": "extension.touchBar.toggleSidebar",
-        "group": "touchBar",
-        "title": "Sidebar"
-      },
-      {
-        "command": "extension.touchBar.ftpSync",
-        "group": "touchBar",
-        "title": "FTP→"
+				"command": "editor.action.goToReferences",
+        "title": "→ƒ Ref"
+			}, {
+				"command": "workbench.action.togglePanel",
+        "title": "⬓ Term"
+			}, {
+				"command": "editor.action.rename",
+        "title": "✎ Re"
+      }, {
+        "command": "workbench.action.closeOtherEditors",
+        "title": "⤭ Close"
+      }, {
+        "command": "workbench.action.toggleZenMode",
+        "title": "□ Zen"
       }
     ],
     "menus": {
       "touchBar": [
-        {
-          "command": "extension.touchBar.term",
-          "group": "touchBar",
-          "when": "config.touchBar.term"
-        },
-        {
-          "command": "extension.touchBar.comment",
-          "group": "touchBar",
-          "when": "config.touchBar.comment"
-        },
-        {
-          "command": "extension.touchBar.qopen",
-          "group": "touchBar",
-          "when": "config.touchBar.qopen"
-        },
-        {
-          "command": "extension.touchBar.commands",
-          "group": "touchBar",
-          "when": "config.touchBar.commands"
-        },
-        {
-          "command": "extension.touchBar.toggleSidebar",
-          "group": "touchBar",
-          "when": "config.touchBar.toggleSidebar"
-        },
-        {
-          "command": "extension.touchBar.ftpSync",
-          "group": "touchBar",
-          "when": "config.touchBar.ftpSync"
-        }
+				{
+          "command": "editor.action.goToReferences",
+          "group": "group_1",
+          "when": "config.touchBar.goToReferences"
+				}, {
+          "command": "workbench.action.togglePanel",
+          "group": "group_2",
+          "when": "config.touchBar.terminal"
+				}, {
+          "command": "editor.action.rename",
+          "group": "group_1",
+          "when": "config.touchBar.rename"
+				}, {
+          "command": "workbench.action.closeOtherEditors",
+          "group": "group_2",
+          "when": "config.touchBar.closeOtherEditors"
+				}, {
+          "command": "workbench.action.toggleZenMode",
+          "group": "group_2",
+          "when": "config.touchBar.toggleZenMode"
+				}
       ]
     },
-    "configuration": [
-      {
-        "type": "object",
-        "title": "Touch Bar Commands",
-        "properties": {
-          "touchBar.term": {
-            "type": "boolean",
-            "default": true,
-            "description": "Toggle the built in terminal on/off"
-          },
-          "touchBar.comment": {
-            "type": "boolean",
-            "default": true,
-            "description": "Toggle comments on selected lines on/off"
-          },
-          "touchBar.qopen": {
-            "type": "boolean",
-            "default": true,
-            "description": "Quick Open any file etc."
-          },
-          "touchBar.commands": {
-            "type": "boolean",
-            "default": true,
-            "description": "Open the command pallette"
-          },
-          "touchBar.toggleSidebar": {
-            "type": "boolean",
-            "default": true,
-            "description": "Toggle sidebar on/off"
-          },
-          "touchBar.ftpSync": {
-            "type": "boolean",
-            "default": false,
-            "description": "FTP sync project with ftp-sync"
-          }
+    "configuration": {
+      "type": "object",
+      "title": "Touch Bar Commands",
+      "properties": {
+        "touchBar.goToReferences": {
+          "type": "boolean",
+          "default": true,
+          "description": "Go to reference [option + click]"
+        },
+        "touchBar.terminal": {
+          "type": "boolean",
+          "default": true,
+          "description": "Toggle the terminal [on/off]"
+        },
+        "touchBar.rename": {
+          "type": "boolean",
+          "default": true,
+          "description": "Rename element [F2]"
+        },
+        "touchBar.closeOtherEditors": {
+          "type": "boolean",
+          "default": true,
+          "description": "Close other editors in group [option + cmd + T]"
+        },
+        "touchBar.toggleZenMode": {
+          "type": "boolean",
+          "default": true,
+          "description": "Close other editors in group [option + cmd + T]"
         }
       }
-    ]
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
     "pretest": "npm run compile",
-    "test": "node ./out/test/runTest.js"
+    "test": "node ./out/test/runTest.js",
+    "build": "vsce package"
   },
   "devDependencies": {
     "@types/glob": "^7.1.1",
