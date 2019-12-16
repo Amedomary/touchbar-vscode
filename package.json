@@ -4,7 +4,7 @@
   "description": "Support touch bar for macbook",
   "publisher": "amedomary",
   "repository": "https://github.com/Amedomary/touchbar-vscode",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "engines": {
     "vscode": "^1.41.0"
   },
@@ -33,7 +33,7 @@
         "title": "⬓ Term"
 			}, {
 				"command": "editor.action.rename",
-        "title": "✎ Re"
+        "title": "✎ Rename"
       }, {
         "command": "workbench.action.closeOtherEditors",
         "title": "⤭ Close"
@@ -69,32 +69,32 @@
     },
     "configuration": {
       "type": "object",
-      "title": "Touch Bar Commands",
+      "title": "TouchBar Pro",
       "properties": {
         "touchBar.goToReferences": {
           "type": "boolean",
           "default": true,
-          "description": "Go to reference [option + click]"
+          "description": "Enables button «→ƒ Ref»"
         },
         "touchBar.terminal": {
           "type": "boolean",
           "default": true,
-          "description": "Toggle the terminal [on/off]"
+          "description": "Enables button «⬓ Term»"
         },
         "touchBar.rename": {
           "type": "boolean",
           "default": true,
-          "description": "Rename element [F2]"
+          "description": "Enables button «✎ Rename»"
         },
         "touchBar.closeOtherEditors": {
           "type": "boolean",
           "default": true,
-          "description": "Close other editors in group [option + cmd + T]"
+          "description": "Enables button «⤭ Close»"
         },
         "touchBar.toggleZenMode": {
           "type": "boolean",
           "default": true,
-          "description": "Close other editors in group [option + cmd + T]"
+          "description": "Enables button «□ Zen»"
         }
       }
     }
