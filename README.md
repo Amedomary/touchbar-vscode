@@ -2,6 +2,8 @@
 
 This adds a few useful features to your Macbook Pro's touch bar while you are working in VSCode.
 
+![Touchbar Example](images/touch_1.png)
+
 ## Alert
 
 You can choose the buttons by setting the following settings.
