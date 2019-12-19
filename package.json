@@ -4,7 +4,7 @@
   "description": "Support touch bar for macbook",
   "publisher": "amedomary",
   "repository": "https://github.com/Amedomary/touchbar-vscode",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "engines": {
     "vscode": "^1.41.0"
   },
@@ -40,6 +40,15 @@
       }, {
         "command": "workbench.action.toggleZenMode",
         "title": "□ Zen"
+      }, {
+        "command": "editor.action.organizeImports",
+        "title": "⇊ Imports"
+      }, {
+        "command": "editor.foldAll",
+        "title": "⇠ FoldAll"
+      }, {
+        "command": "editor.unfoldAll",
+        "title": "⇢ UnFold"
       }
     ],
     "menus": {
@@ -64,7 +73,19 @@
           "command": "workbench.action.toggleZenMode",
           "group": "group_2",
           "when": "config.touchBar.toggleZenMode"
-				}
+				}, {
+          "command": "editor.action.organizeImports",
+          "group": "group_1",
+          "when": "config.touchBar.organizeImports"
+        },{
+          "command": "editor.foldAll",
+          "group": "group_3",
+          "when": "config.touchBar.foldAll"
+        }, {
+          "command": "editor.unfoldAll",
+          "group": "group_3",
+          "when": "config.touchBar.unfoldAll"
+        }
       ]
     },
     "configuration": {
@@ -73,12 +94,12 @@
       "properties": {
         "touchBar.goToReferences": {
           "type": "boolean",
-          "default": true,
+          "default": false,
           "description": "Enables button «→ƒ Ref»"
         },
         "touchBar.terminal": {
           "type": "boolean",
-          "default": true,
+          "default": false,
           "description": "Enables button «⬓ Term»"
         },
         "touchBar.rename": {
@@ -95,6 +116,21 @@
           "type": "boolean",
           "default": true,
           "description": "Enables button «□ Zen»"
+        },
+        "touchBar.organizeImports": {
+          "type": "boolean",
+          "default": false,
+          "description": "Enables button «⇊ Imports»"
+        },
+        "touchBar.foldAll": {
+          "type": "boolean",
+          "default": false,
+          "description": "Enables button «⇠ FoldAll»"
+        },
+        "touchBar.unfoldAll": {
+          "type": "boolean",
+          "default": false,
+          "description": "Enables button «⇢ UnFold»"
         }
       }
     }

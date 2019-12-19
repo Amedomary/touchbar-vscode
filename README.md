@@ -3,11 +3,12 @@
 This adds a few useful features to your Macbook Pro's touch bar while you are working in VSCode.
 
 ![Touchbar Example](images/touch_1.png)
+![Touchbar Example 2](images/touch_2.png)
 
 ## Alert
 
 You can choose the buttons by setting the following settings.
-Please have in mind the limit of 3-5 active buttons. More than that will break the layout and the buttons will not be visible.
+Please have in mind the limit of 3-8 active buttons. More than that will break the layout and the buttons will not be visible.
 
 ## Settings
 
@@ -28,3 +29,12 @@ Default settings:
 
 - "□ Zen" →
 "touchBar.toggleZenMode": true
+
+- "⇊ Imports" →
+"editor.action.organizeImports": false
+
+- "⇠ FoldAll" →
+"editor.foldAll": false
+
+- "⇢ UnFold" →
+"editor.unfoldAll": false
