@@ -2,8 +2,10 @@
 
 This adds a few useful features to your Macbook Pro's touch bar while you are working in VSCode.
 
-![Touchbar Example](images/touch_1.png)
-![Touchbar Example 2](images/touch_2.png)
+Screen examples:
+- ![Touchbar Example](images/touch_1.png)
+- ![Touchbar Example 2](images/touch_2.png)
+- ![Touchbar Example 3](images/touch_3.png)
 
 ## Alert
 
