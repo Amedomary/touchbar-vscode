@@ -6,40 +6,56 @@ Screen examples:
 - ![Touchbar Example](images/touch_1.png)
 - ![Touchbar Example 2](images/touch_2.png)
 - ![Touchbar Example 3](images/touch_3.png)
+- ![Touchbar Example 4](images/touch_4.png)
+
+Settings example:
+```json
+{
+  "touchBar.foldAll": true,
+}
+```
 
 ## Alert
 
 You can choose the buttons by setting the following settings.
 Please have in mind the limit of 3-8 active buttons. More than that will break the layout and the buttons will not be visible.
 
+### VS code settings
+
+You can disabled default vs code buttons for more space
+```json
+{
+  "keyboard.touchbar.ignored": [
+    "play",
+    "workbench.action.debug.start",
+    "workbench.action.debug.run"
+  ],
+}
+```
+
 ## Settings
 
-You can on/off every buttons
+You can on/off every buttons or group
 
-Default settings:
-- "⤭ Close" →
-"touchBar.closeOtherEditors": true
+| Button                                  | Properties                   | Default value | Type    | Groupe      |
+| --------------------------------------- | ---------------------------- | ------------- | ------- | ----------- |
+| →ƒ Ref                                  | touchBar.goToReferences      | true          | boolean | group_1     |
+| ⬓ Term                                  | touchBar.terminal            | false         | boolean | group_2     |
+| ✎ Rename                                | touchBar.rename              | true          | boolean | group_1     |
+| ⤭ Close                                 | touchBar.closeOtherEditors   | true          | boolean | group_2     |
+| □ Zen                                   | touchBar.toggleZenMode       | true          | boolean | group_2     |
+| ⇊ Imports                               | touchBar.organizeImports     | false         | boolean | group_1     |
+| ⇠ FoldAll                               | touchBar.foldAll             | false         | boolean | group_3     |
+| ⇢ UnFold                                | touchBar.unfoldAll           | false         | boolean | group_3     |
+| ☰↓ Copy                                 | touchBar.copyLinesDownAction | true          | boolean | group_1     |
+|                                         | touchBar.showActivityBar     | false         | boolean |             |
+| ![](images/files-activity-bar.png)      | touchBar.showExplorer        | true          | boolean | activityBar |
+| ![](images/search-activity-bar.png)     | touchBar.search              | true          | boolean | activityBar |
+| ![](images/scm-activity-bar.png)        | touchBar.scm                 | true          | boolean | activityBar |
+| ![](images/debug-activity-bar.png)      | touchBar.debug               | true          | boolean | activityBar |
+| ![](images/extensions-activity-bar.png) | touchBar.extensions          | true          | boolean | activityBar |
+|                                         |                              |               |         |             |
 
-- "→ƒ Ref" →
-"touchBar.goToReferences": true
+## In progress
 
-- "⬓ Term" →
-"touchBar.togglePanel": true
-
-- "✎ Rename" →
-"touchBar.rename": true
-
-- "□ Zen" →
-"touchBar.toggleZenMode": true
-
-- "⇊ Imports" →
-"editor.action.organizeImports": false
-
-- "⇠ FoldAll" →
-"editor.foldAll": false
-
-- "⇢ UnFold" →
-"editor.unfoldAll": false
-
-- "☰↓ Copy" →
-"touchBar.copyLinesDownAction": true
+dark/light theme toggle

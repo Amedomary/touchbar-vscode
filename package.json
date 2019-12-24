@@ -4,7 +4,7 @@
   "description": "Support touch bar for macbook",
   "publisher": "amedomary",
   "repository": "https://github.com/Amedomary/touchbar-vscode",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "engines": {
     "vscode": "^1.41.0"
   },
@@ -26,72 +26,138 @@
   "contributes": {
     "commands": [
       {
-				"command": "editor.action.goToReferences",
+        "command": "editor.action.goToReferences",
         "title": "→ƒ Ref"
-			}, {
-				"command": "workbench.action.togglePanel",
+      },
+      {
+        "command": "workbench.action.togglePanel",
         "title": "⬓ Term"
-			}, {
-				"command": "editor.action.rename",
+      },
+      {
+        "command": "editor.action.rename",
         "title": "✎ Rename"
-      }, {
+      },
+      {
         "command": "workbench.action.closeOtherEditors",
         "title": "⤭ Close"
-      }, {
+      },
+      {
         "command": "workbench.action.toggleZenMode",
         "title": "□ Zen"
-      }, {
+      },
+      {
         "command": "editor.action.organizeImports",
         "title": "⇊ Imports"
-      }, {
+      },
+      {
         "command": "editor.foldAll",
         "title": "⇠ FoldAll"
-      }, {
+      },
+      {
         "command": "editor.unfoldAll",
         "title": "⇢ UnFold"
-      }, {
+      },
+      {
         "command": "editor.action.copyLinesDownAction",
         "title": "☰↓ Copy"
+      },
+      {
+        "command": "workbench.files.action.focusFilesExplorer",
+        "title": "1Files",
+        "icon": "./images/files-activity-bar.png"
+      },
+      {
+        "command": "workbench.view.search",
+        "title": "2Search",
+        "icon": "./images/search-activity-bar.png"
+      },
+      {
+        "command": "workbench.view.scm",
+        "title": "3Source",
+        "icon": "./images/scm-activity-bar.png"
+      },
+      {
+        "command": "workbench.view.debug",
+        "title": "4Debug",
+        "icon": "./images/debug-activity-bar.png"
+      },
+      {
+        "command": "workbench.view.extensions",
+        "title": "5Extensions",
+        "icon": "./images/extensions-activity-bar.png"
       }
     ],
     "menus": {
       "touchBar": [
-				{
+        {
           "command": "editor.action.goToReferences",
           "group": "group_1",
           "when": "config.touchBar.goToReferences"
-				}, {
+        },
+        {
           "command": "workbench.action.togglePanel",
           "group": "group_2",
           "when": "config.touchBar.terminal"
-				}, {
+        },
+        {
           "command": "editor.action.rename",
           "group": "group_1",
           "when": "config.touchBar.rename"
-				}, {
+        },
+        {
           "command": "workbench.action.closeOtherEditors",
           "group": "group_2",
           "when": "config.touchBar.closeOtherEditors"
-				}, {
+        },
+        {
           "command": "workbench.action.toggleZenMode",
           "group": "group_2",
           "when": "config.touchBar.toggleZenMode"
-				}, {
+        },
+        {
           "command": "editor.action.organizeImports",
           "group": "group_1",
           "when": "config.touchBar.organizeImports"
-        },{
+        },
+        {
           "command": "editor.foldAll",
           "group": "group_3",
           "when": "config.touchBar.foldAll"
-        }, {
+        },
+        {
           "command": "editor.unfoldAll",
           "group": "group_3",
           "when": "config.touchBar.unfoldAll"
-        }, {
+        },
+        {
           "command": "editor.action.copyLinesDownAction",
           "group": "group_1",
           "when": "config.touchBar.copyLinesDownAction"
+        },
+        {
+          "command": "workbench.files.action.focusFilesExplorer",
+          "when": "config.touchBar.showActivityBar && config.touchBar.showExplorer",
+          "group": "activityBar"
+        },
+        {
+          "command": "workbench.view.search",
+          "when": "config.touchBar.showActivityBar && config.touchBar.search",
+          "group": "activityBar"
+        },
+        {
+          "command": "workbench.view.scm",
+          "when": "config.touchBar.showActivityBar && config.touchBar.scm",
+          "group": "activityBar"
+        },
+        {
+          "command": "workbench.view.debug",
+          "when": "config.touchBar.showActivityBar && config.touchBar.debug",
+          "group": "activityBar"
+        },
+        {
+          "command": "workbench.view.extensions",
+          "when": "config.touchBar.showActivityBar && config.touchBar.extensions",
+          "group": "activityBar"
         }
       ]
     },
@@ -143,6 +209,36 @@
           "type": "boolean",
           "default": true,
           "description": "Enables button «☰↓ Copy»"
+        },
+        "touchBar.showActivityBar": {
+          "type": "boolean",
+          "default": false,
+          "description": "Enables groupe buttons «Activity bar»"
+        },
+        "touchBar.showExplorer": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enables button «File explorer» of Activity bar"
+        },
+        "touchBar.search": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enables button «Search» of Activity bar"
+        },
+        "touchBar.scm": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enables button «Source control» of Activity bar"
+        },
+        "touchBar.debug": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enables button «Debug» of Activity bar"
+        },
+        "touchBar.extensions": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enables button «Extensions» of Activity bar"
         }
       }
     }
