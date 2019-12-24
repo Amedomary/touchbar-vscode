@@ -38,3 +38,6 @@ Default settings:
 
 - "⇢ UnFold" →
 "editor.unfoldAll": false
+
+- "☰↓ Copy" →
+"touchBar.copyLinesDownAction": true
