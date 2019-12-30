@@ -1,6 +1,6 @@
 # «Touch Bar Pro» extention for macbook pro
 
-This adds a few useful features to your Macbook Pro's touch bar while you are working in VSCode.
+This extension adds a few useful features to your Macbook Pro's touch bar while you are working in VSCode.
 
 Screen examples:
 - ![Touchbar Example](images/touch_1.png)
@@ -17,12 +17,13 @@ Settings example:
 
 ## Alert
 
-You can choose the buttons by setting the following settings.
-Please have in mind the limit of 3-8 active buttons. More than that will break the layout and the buttons will not be visible.
+You can choose the buttons by adjusting the following settings.
+Please bear in mind the limit of 3-8 active buttons.
+More than that will break the layout and the buttons will be invisible.
 
-### VS code settings
+### VScode settings
 
-You can disabled default vs code buttons for more space
+You can disabled default VScode buttons for more space
 ```json
 {
   "keyboard.touchbar.ignored": [
@@ -35,7 +36,7 @@ You can disabled default vs code buttons for more space
 
 ## Settings
 
-You can on/off every buttons or group
+You can turn on/off every buttons or group
 
 | Button                                  | Properties                   | Default value | Type    | Groupe      |
 | --------------------------------------- | ---------------------------- | ------------- | ------- | ----------- |
