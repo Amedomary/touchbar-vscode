@@ -7,11 +7,22 @@ Screen examples:
 - ![Touchbar Example 2](images/touch_2.png)
 - ![Touchbar Example 3](images/touch_3.png)
 - ![Touchbar Example 4](images/touch_4.png)
+- ![Touchbar Example 5](images/touch_5.png)
 
 Settings example:
 ```json
 {
   "touchBar.foldAll": true,
+}
+```
+
+```json
+{
+  "touchBar.foldAll": false,
+  "touchBar.rename": false,
+  "touchBar.copyLinesDownAction": false,
+  "touchBar.toggleZenMode": false,
+  "touchBar.closeOtherEditors": false,
 }
 ```
 
@@ -55,8 +66,6 @@ You can turn on/off every buttons or group
 | ![](images/scm-activity-bar.png)        | touchBar.scm                 | true          | boolean | activityBar |
 | ![](images/debug-activity-bar.png)      | touchBar.debug               | true          | boolean | activityBar |
 | ![](images/extensions-activity-bar.png) | touchBar.extensions          | true          | boolean | activityBar |
+| Day / Night                             | touchBar.themeToggle         | false         | boolean | themeToggle |
 |                                         |                              |               |         |             |
 
-## In progress
-
-dark/light theme toggle

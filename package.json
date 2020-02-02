@@ -4,7 +4,7 @@
   "description": "Support touch bar for macbook",
   "publisher": "amedomary",
   "repository": "https://github.com/Amedomary/touchbar-vscode",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "engines": {
     "vscode": "^1.41.0"
   },
@@ -14,7 +14,7 @@
   "keywords": [
     "macbook pro",
     "extra buttons",
-    "vscode",
+    "dark theme toggle",
     "touch bar",
     "amedomary"
   ],
@@ -85,6 +85,14 @@
         "command": "workbench.view.extensions",
         "title": "5Extensions",
         "icon": "./images/extensions-activity-bar.png"
+      },
+      {
+        "command": "extensionTouchBar.night",
+        "title": "Night"
+      },
+      {
+        "command": "extensionTouchBar.day",
+        "title": "Day"
       }
     ],
     "menus": {
@@ -158,6 +166,16 @@
           "command": "workbench.view.extensions",
           "when": "config.touchBar.showActivityBar && config.touchBar.extensions",
           "group": "activityBar"
+        },
+        {
+          "command": "extensionTouchBar.night",
+          "when": "config.touchBar.themeToggle",
+          "group": "themeToggle"
+        },
+        {
+          "command": "extensionTouchBar.day",
+          "when": "config.touchBar.themeToggle",
+          "group": "themeToggle"
         }
       ]
     },
@@ -239,7 +257,12 @@
           "type": "boolean",
           "default": true,
           "description": "Enables button «Extensions» of Activity bar"
-        }
+        },
+        "touchBar.themeToggle": {
+          "type": "boolean",
+          "default": false,
+          "description": "Enables button «Debug» of Activity bar"
+        },
       }
     }
   },
