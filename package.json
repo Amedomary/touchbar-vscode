@@ -262,7 +262,7 @@
           "type": "boolean",
           "default": false,
           "description": "Enables button «Debug» of Activity bar"
-        },
+        }
       }
     }
   },

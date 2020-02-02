@@ -15,7 +15,7 @@ const getSettings = () => {
 
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
-export function activate(context: vscode.ExtensionContext) {
+export function activate(this: any, context: vscode.ExtensionContext) {
   let disposable = vscode.workspace.onDidChangeConfiguration(getSettings, this);
   let themeKey = 'workbench.colorTheme';
   let settings = getSettings();
