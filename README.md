@@ -12,7 +12,7 @@ Screen examples:
 Settings example:
 ```json
 {
-  "touchBar.foldAll": true,
+  "touchBar.foldAll": true
 }
 ```
 
@@ -23,6 +23,8 @@ Settings example:
   "touchBar.copyLinesDownAction": false,
   "touchBar.toggleZenMode": false,
   "touchBar.closeOtherEditors": false,
+  "touchBar.dayTheme": "Visual Studio Light",
+  "touchBar.nightTheme": "Community Material Theme Darker High Contrast"
 }
 ```
 
@@ -67,5 +69,9 @@ You can turn on/off every buttons or group
 | ![](images/debug-activity-bar.png)      | touchBar.debug               | true          | boolean | activityBar |
 | ![](images/extensions-activity-bar.png) | touchBar.extensions          | true          | boolean | activityBar |
 | Day / Night                             | touchBar.themeToggle         | false         | boolean | themeToggle |
-|                                         |                              |               |         |             |
 
+
+| Settings            | Properties          | Default value       | Type   |
+| ------------------- | ------------------- | ------------------- | ------ |
+| touchBar.dayTheme   | touchBar.dayTheme   | Visual Studio Light | String |
+| touchBar.nightTheme | touchBar.nightTheme | Visual Studio Dark  | String |
