@@ -4,7 +4,7 @@
   "description": "Support touch bar for macbook",
   "publisher": "amedomary",
   "repository": "https://github.com/Amedomary/touchbar-vscode",
-  "version": "0.3.1",
+  "version": "1.0.0",
   "engines": {
     "vscode": "^1.41.0"
   },
@@ -44,6 +44,10 @@
       {
         "command": "workbench.action.toggleZenMode",
         "title": "□ Zen"
+      },
+      {
+        "command": "workbench.files.action.showActiveFileInExplorer",
+        "title": "⊙ Target"
       },
       {
         "command": "editor.action.organizeImports",
@@ -121,6 +125,11 @@
           "command": "workbench.action.toggleZenMode",
           "group": "group_2",
           "when": "config.touchBar.toggleZenMode"
+        },
+        {
+          "command": "workbench.files.action.showActiveFileInExplorer",
+          "group": "group_2",
+          "when": "config.touchBar.showActiveFileInExplorer"
         },
         {
           "command": "editor.action.organizeImports",
@@ -207,6 +216,11 @@
           "type": "boolean",
           "default": true,
           "description": "Enables button «□ Zen»"
+        },
+        "touchBar.showActiveFileInExplorer": {
+          "type": "boolean",
+          "default": false,
+          "description": "Enables button «⊙ Target»"
         },
         "touchBar.organizeImports": {
           "type": "boolean",
