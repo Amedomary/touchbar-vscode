@@ -4,9 +4,9 @@
   "description": "Support touch bar for macbook",
   "publisher": "amedomary",
   "repository": "https://github.com/Amedomary/touchbar-vscode",
-  "version": "1.0.0",
+  "version": "1.17.4",
   "engines": {
-    "vscode": "^1.41.0"
+    "vscode": "^1.45.1"
   },
   "categories": [
     "Keymaps"

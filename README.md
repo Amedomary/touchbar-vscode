@@ -3,7 +3,8 @@
 This extension adds a few useful features to your Macbook Pro's touch bar while you are working in VSCode.
 
 Screen examples:
-- ![Touchbar Example](images/touch_1.png)
+- ![Touchbar Example my set](images/touch_6.png)
+- ![Touchbar Example 1](images/touch_1.png)
 - ![Touchbar Example 2](images/touch_2.png)
 - ![Touchbar Example 3](images/touch_3.png)
 - ![Touchbar Example 4](images/touch_4.png)
