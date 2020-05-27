@@ -3,20 +3,21 @@
 This extension adds a few useful features to your Macbook Pro's touch bar while you are working in VSCode.
 
 Screen examples:
-- ![Touchbar Example my set](images/touch_6.png)
 - ![Touchbar Example 1](images/touch_1.png)
 - ![Touchbar Example 2](images/touch_2.png)
 - ![Touchbar Example 3](images/touch_3.png)
 - ![Touchbar Example 4](images/touch_4.png)
 - ![Touchbar Example 5](images/touch_5.png)
+- ![Touchbar Example my set](images/touch_6.png)
 
-Settings example:
+Settings example [1]:
 ```json
 {
   "touchBar.foldAll": true
 }
 ```
 
+Settings example [2]:
 ```json
 {
   "touchBar.foldAll": false,
@@ -26,6 +27,21 @@ Settings example:
   "touchBar.closeOtherEditors": false,
   "touchBar.dayTheme": "Visual Studio Light",
   "touchBar.nightTheme": "Community Material Theme Darker High Contrast"
+}
+```
+
+Settings example [3]:
+```json
+{
+  "keyboard.touchbar.ignored": [
+    "play",
+    "workbench.action.debug.start",
+    "workbench.action.debug.run",
+  ],
+  "touchBar.foldAll": false,
+  "touchBar.rename": false,
+  "touchBar.copyLinesDownAction": false,
+  "touchBar.closeOtherEditors": false,
 }
 ```
 
@@ -43,7 +59,9 @@ You can disabled default VScode buttons for more space
   "keyboard.touchbar.ignored": [
     "play",
     "workbench.action.debug.start",
-    "workbench.action.debug.run"
+    "workbench.action.debug.run",
+    "workbench.action.navigateBack",
+    "workbench.action.navigateForward",
   ],
 }
 ```
