@@ -1,7 +1,7 @@
 {
   "name": "touchbarvscode",
-  "displayName": "TouchBar Pro",
-  "description": "Support touch bar for macbook",
+  "displayName": "Touch Bar «TouchBar Pro»",
+  "description": "Support touch bar for MacBook pro",
   "publisher": "amedomary",
   "repository": "https://github.com/Amedomary/touchbar-vscode",
   "version": "1.17.4",
