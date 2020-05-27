@@ -4,7 +4,7 @@
   "description": "Support touch bar for MacBook pro",
   "publisher": "amedomary",
   "repository": "https://github.com/Amedomary/touchbar-vscode",
-  "version": "1.17.5",
+  "version": "1.17.6",
   "engines": {
     "vscode": "^1.45.1"
   },
