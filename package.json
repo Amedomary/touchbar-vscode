@@ -97,6 +97,10 @@
       {
         "command": "extensionTouchBar.day",
         "title": "Day"
+      },
+      {
+        "command": "editor.action.revealDefinition",
+        "title": "Definition"
       }
     ],
     "menus": {
@@ -185,6 +189,11 @@
           "command": "extensionTouchBar.day",
           "when": "config.touchBar.themeToggle",
           "group": "themeToggle"
+        },
+        {
+          "command": "editor.action.revealDefinition",
+          "when": "config.touchBar.gotoDefinition",
+          "group": "group_1"
         }
       ]
     },
@@ -276,6 +285,11 @@
           "type": "boolean",
           "default": false,
           "description": "Enables button «Debug» of Activity bar"
+        },
+        "touchBar.gotoDefinition": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enables button «Go To Definition» of Activity bar"
         }
       }
     }
