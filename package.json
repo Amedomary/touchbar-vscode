@@ -27,7 +27,7 @@
     "commands": [
       {
         "command": "editor.action.goToReferences",
-        "title": "→ƒ Ref"
+        "title": "ƒ⥺ Ref"
       },
       {
         "command": "workbench.action.togglePanel",
@@ -100,7 +100,7 @@
       },
       {
         "command": "editor.action.revealDefinition",
-        "title": "Definition"
+        "title": "→ƒ Definition"
       }
     ],
     "menus": {
