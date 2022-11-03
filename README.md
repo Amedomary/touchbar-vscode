@@ -1,3 +1,5 @@
+☕️ Buy Me a Coffee - [YooMoney]([https://](https://yoomoney.ru/to/4100117948480394))
+
 # «Touch Bar Pro» extention for macbook pro
 
 This extension adds a few useful features to your Macbook Pro's touch bar while you are working in VSCode.
